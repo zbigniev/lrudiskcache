@@ -1,0 +1,35 @@
+<project>
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="build/jar"/>
+        <jar destfile="build/jar/LRUCache.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="com.diskLRUCache.LRUCache"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <path id="cp">
+        <pathelement location="lib/testng-testng-5.13.1.jar"/>
+        <pathelement location="build"/>
+    </path>
+
+    <taskdef name="testng" classpathref="cp"
+             classname="org.testng.TestNGAntTask" />
+
+    <target name="test">
+        <testng classpathref="cp" groups="fast">
+            <classfileset dir="build" includes="classes/com/diskLRUCache/*.class"/>
+        </testng>
+    </target>
+
+</project>
