@@ -14,7 +14,7 @@ import java.util.Map;
 class Node {
     private String fileName;
     private long dataSize;
-    
+
     public Node(String fileName, long dataSize) {
         this.fileName = fileName;
         this.dataSize = dataSize;
