@@ -1,16 +1,11 @@
 package com.diskLRUCache;
 
-import org.testng.annotations.*;
+import org.testng.annotations.BeforeClass;
 
-public final class LRUCacheTest {
+public class LRUCacheTest {
 
     @BeforeClass
     public void setup() {
 
-    }
-
-    @Test(groups = {"fast"})
-    public void aFastTest() {
-        System.out.println("Fast Test");
     }
 }

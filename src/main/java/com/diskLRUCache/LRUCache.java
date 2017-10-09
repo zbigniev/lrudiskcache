@@ -130,7 +130,7 @@ public class LRUCache extends LinkedHashMap {
         return false;
     }
 
-    public static LRUCache getInstance(String directory, int valueCount, long maxSize, String hashAlgo) throws Exception {
+    public static LRUCache getInstance(String directory, int valueCount, long maxSize, String hashAlgo) throws NoSuchAlgorithmException {
         if (instance == null) {
             synchronized (LRUCache.class) {
                 if (instance == null) {

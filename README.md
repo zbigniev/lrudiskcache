@@ -1,6 +1,9 @@
 # lrudiskcache
 Disk based LRU Cache
 
+This project is very much a WIP
+
+
 This is a thread safe implementation of LRU Cache where cache size is bound by two parameters
 1. ```valueCount```: It bounds the number of nodes allowed in the in-memory data structure.
 2. ```maxSize```: It bounds the max storage size in directory in disk.
